@@ -11,5 +11,10 @@ describe ('Basic E2E Testing', () => {
         cy.get(selectors.searchIcon).click() //opening the search bar
         cy.get(selectors.searchBar).type('first steps', {delay: 200}) //delaying to simulate a real user typing
         cy.get(selectors.searchX).click() //clearing the search bar
-        });
+        })
+
+    it('Using premade commands', () => {
+        cy.visit('/')
+        cy.validateLabels() //this is a custom command that we created on the commands.js file
+    })
 })
