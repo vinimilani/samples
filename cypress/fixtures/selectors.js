@@ -2,5 +2,7 @@ export const selectors = { //storing selectors on variables makes it easier to m
     headerMenu :'.navbar__link--active',
     searchIcon: '.icon-light-transparent',
     searchBar: '#docsearch-input',
-    searchX: '.DocSearch-Reset'
+    searchX: '.DocSearch-Reset',
+    APIdoc: '[href="/api/table-of-contents"]',
+    cookieAccept: '.osano-cm-accept'
 }

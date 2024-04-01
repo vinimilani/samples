@@ -1,6 +1,10 @@
 import { selectors } from '../fixtures/selectors' //importing the menuSelector from the selectors file
 
 describe ('Basic E2E Testing', () => {
+
+    beforeEach(() => {
+        cy.clearCookies() //clearing cookies before each test
+    })
     it('First steps on cypress docs page', () => {
         cy.intercept('GET', 'https://docs.cypress.io/guides/overview/why-cypress/').as('PageLoaded') //intercepting an API call to wait
         cy.visit('/') //we set the test URL on the config file, so we can just use '/'
@@ -16,5 +20,9 @@ describe ('Basic E2E Testing', () => {
     it('Using premade commands', () => {
         cy.visit('/')
         cy.validateLabels() //this is a custom command that we created on the commands.js file
+        cy.get(selectors.APIdoc).click() //clicking on the API doc link
+        cy.url().should('include', '/api/table-of-contents') //asserting that the URL contains the expected string
+        cy.get(selectors.cookieAccept).click() //closing the cookie banner
+        cy.title().should('eq', 'Table of Contents | Cypress Documentation') //asserting the page title
     })
 })
