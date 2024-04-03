@@ -22,6 +22,7 @@ describe ('Basic E2E Testing', () => {
         cy.validateLabels() //this is a custom command that we created on the commands.js file
         cy.get(selectors.APIdoc).click() //clicking on the API doc link
         cy.url().should('include', '/api/table-of-contents') //asserting that the URL contains the expected string
+        cy.wait(3000) //on CI/CD this wait is necessary to make sure that the cookie banner is loaded
         cy.get(selectors.cookieAccept).click() //closing the cookie banner
         cy.title().should('eq', 'Table of Contents | Cypress Documentation') //asserting the page title
     })
