@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "cypress": "11.2.0"
+    "cypress": "11.2.0",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "scripts": {
     "start": "cypress open"
