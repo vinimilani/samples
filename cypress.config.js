@@ -5,12 +5,9 @@ module.exports = defineConfig({
   viewportWidth: 1280,
   viewportHeight: 720,
   chromeWebSecurity: false,
-  reporter: 'cypress-mochawesome-reporter',
+  reporter: "cypress-multi-reporters",
   reporterOptions: {
-    "reportDir": "cypress/results",
-    "overwrite": false,
-    "html": false,
-    "json": true
+    configFile: 'reporter-config.json',
   },
   video: false,
 
