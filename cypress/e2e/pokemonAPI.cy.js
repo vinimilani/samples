@@ -5,7 +5,6 @@ describe('Pokemon API Testing', () => {
   // We're going to compare the Pokemon Types we have in a fixture with the types we get from the Pokemon API
   it('Getting type of Pokemons', () => {
     const types = pokemonTypes // Creating a fixture with the types of Pokemons
-    cy.log(types)
     cy.request('GET', 'https://api.pokemontcg.io/v2/types') // Making a GET request to the API
       .then((response) => { // Using a promise to handle the response
         expect(response.status).to.eq(200) // Asserting the status code - success should be 200

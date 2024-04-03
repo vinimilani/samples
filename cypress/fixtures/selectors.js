@@ -4,5 +4,10 @@ export const selectors = { //storing selectors on variables makes it easier to m
     searchBar: '#docsearch-input',
     searchX: '.DocSearch-Reset',
     APIdoc: '[href="/api/table-of-contents"]',
-    cookieAccept: '.osano-cm-accept'
+    cookieAccept: '.osano-cm-accept',
+    userName: '#username',
+    password: '#password',
+    loginConfirmation: '#flash',
+    subheader: '.subheader',
+    logoutButton: '.button',
 }
