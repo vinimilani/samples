@@ -1,4 +1,4 @@
-import  pokemonTypes  from '../fixtures/pokemonTypes.js'
+import pokemonTypes from "../fixtures/pokemonTypes"
 
 describe('Pokemon API Testing', () => {
   // In this test, we're using an open API from Pokemon TCG to get the types of Pokemons

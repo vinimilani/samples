@@ -1,4 +1,4 @@
-const pokemonTypes = [
+const pokemonTypes: string[] = [
     "Colorless",
     "Darkness",
     "Dragon",
@@ -12,4 +12,4 @@ const pokemonTypes = [
     "Water"
 ];
 
-module.exports = pokemonTypes;
+export default pokemonTypes;
